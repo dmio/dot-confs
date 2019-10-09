@@ -90,3 +90,9 @@ nnoremap <leader>gs :Gtags -s<CR><CR>
 nnoremap <leader>gc :GtagsCursor<CR>
 nnoremap <leader>gu :GtagsUpdate<CR>
 
+if has("autocmd")
+  augroup templates
+    "autocmd BufNewFile test??.c 0r ~/.vim/templates/skel_test.c|/return/|normal! O |start
+    autocmd BufNewFile test??.c 0r ~/.vim/templates/skel_test.c|/return/
+  augroup END
+endif
