@@ -33,19 +33,17 @@ Plug 'https://github.com/jeetsukumaran/vim-buffergator.git'
 Plug 'brookhong/cscope.vim'
 Plug 'tpope/vim-obsession'
 Plug 'Asheq/close-buffers.vim'
+Plug 'inkarkat/vim-mark' | Plug 'inkarkat/vim-ingo-library' " ingo is dependency of inkarkat/vim-mark
 call plug#end()
 
 filetype on
 filetype plugin on
 filetype plugin indent on
 
-" Vimball plugins (installed by UseVimball)
-" Mark
-" http://www.vim.org/scripts/script.php?script_id=2666
-" comments
-" http://www.vim.org/scripts/download_script.php?src_id=9801
+" vim-mark
 nnoremap <unique> <Leader>c <Plug>MarkAllClear<return>
 
+" vim-buffergator
 nmap <silent> ;b :BuffergatorToggle<return>
 let g:buffergator_suppress_keymaps = 1
 
